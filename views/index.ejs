@@ -72,13 +72,23 @@
 <!-- Footer -->
 <footer>
     <div class="addendum">
-        <h3>Addendum</h3>
-        <p><strong>Problem Solved:</strong> The main objective of this project was to create a job application tracker that allows users to add job applications, set their status (Applied, Interviewing, Offered, or Rejected), and manage them by moving applications between these categories.</p>
-        
-        <p><strong>Solution Overview:</strong> I implemented a solution using JavaScript to handle form submissions, store each job application in an array, and dynamically display the applications based on their status. The interface updates in real-time as applications are moved between statuses, offering an intuitive way to track job application progress.</p>
-        
-        <p><strong>Challenges and Solutions:</strong> One challenge I encountered was ensuring that the applications could seamlessly move between different status categories without refreshing the page. I resolved this by utilizing JavaScript functions to filter and update the applications array based on their current status. Styling consistency across dynamic elements was another challenge, which I addressed by carefully applying CSS classes to each interactive element. This approach helped achieve a uniform and visually appealing design.</p>
-    </div>
+    <h3>Addendum</h3>
+    <p><strong>Problem Addressed:</strong> The given project was supposed to create a job application tracker that would give the user an opportunity to add, manage, and track job applications by different statuses: Applied, Interviewing, Offered, and Rejected. The solution had to be interactive—meaning the updating of the status of the application should be done without page refresh—plus the data had to persist.</p>
+    
+    <p><strong>Solution Overview:</strong> It was designed using JavaScript atop MongoDB, driven by an Express backend, to make full use of dynamic functionality and persistence of data. The system then handles form submissions, systematically storing every job application into a MongoDB database while displaying applications based on status. Users interact via the Express server with a user-centric interface, and JavaScript functionality dynamically updates that interface to reflect changes in application status.</p>
+    
+    <p><strong>Obstacles and Resolutions:</strong></p>
+    <p><em>Dynamic Data Management:</em> The main challenge regarding data management was to enable applications to be persisted and retrieved. The use of MongoDB with Mongoose provided the capability to store each job application in a database, maintaining persistence through sessions.</p>
+
+    <p><em>Smooth Status Updates:</em> Status changes have been implemented using JavaScript and AJAX requests to the backend, enabling real-time updates without the need for page reloads. The outcome of this setup is immediate status updates that users see as soon as changes are made.</p>
+
+    <p><em>Consistency in Styling:</em> Another challenge was to maintain a consistent, flexible style across dynamic elements. To achieve this, I applied CSS classes to each interactive element, ensuring the design remains cohesive even when elements are dynamically added or modified.</p>
+
+    <p><em>Database Hosting and Connectivity:</em> Setting up MongoDB for dynamic data storage introduced initial challenges with connection strings and security. I resolved this by configuring environment variables for secure database credentials and testing the connection thoroughly. Additionally, I used GitHub Pages to create a friendly URL that redirects to the Render-hosted app for accessibility.</p>
+
+    <p><em>Custom URLs and Redirection:</em> I used GitHub Pages to create a custom URL structure, <code>http://<your-github-username>.github.io/itc505/lab-6/</code>, and enabled a redirect to the Render-hosted application to enhance accessibility and meet project requirements.</p>
+</div>
+
     
     <div class="last-updated">
         <p><strong>Last Updated:</strong> <span id="lastModified"></span></p>
