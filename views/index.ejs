@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            Job Tracker
+            <p>Track your job applications and stay on top of deadlines!</p>
+        </header>
+
+        <!-- Left Sidebar (Menu) -->
+        <nav class="sidebar-left">
+            <ul>
+                <li><a href="#" id="link-applied">Applied</a></li>
+                <li><a href="#" id="link-interviewing">Interviewing</a></li>
+                <li><a href="#" id="link-offered">Offered</a></li>
+                <li><a href="#" id="link-rejected">Rejected</a></li>
+                <li><a href="#" id="link-add">Add Job Application</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <div id="form-container">
+                <h2>Add Job Application</h2>
+                <form id="jobForm">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" required>
+
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" required>
+
+                    <label for="date">Application Date:</label>
+                    <input type="date" id="date" required>
+
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="applied">Applied</option>
+                        <option value="interviewing">Interviewing</option>
+                        <option value="offered">Offered</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+
+                    <button type="button" onclick="addApplication()">Add Application</button>
+                </form>
+            </div>
+            <div id="application-list" style="display: none;"></div>
+        </main>
+
+        <!-- Right Sidebar (Advertisements) -->
+        <aside class="sidebar-right">
+            <!-- First Advertisement -->
+            <a href="https://www.amazon.com/Cracking-Amazon-Interview-Step-Guide-ebook/dp/B078FWZGRL" target="_blank" class="ad-link">
+                <img src="https://m.media-amazon.com/images/I/719QwBsXWKL._SL1500_.jpg" alt="Interview Prep Book">
+                <span>Cracking the Amazon Interview: A Step-by-Step Guide</span>
+            </a>
+
+            <!-- Second Advertisement -->
+            <a href="https://www.amazon.com/Ace-Interview-Job-ebook/dp/B0013D32EE/ref=sr_1_2?crid=3UWHH3RHYSJN8&dib=eyJ2IjoiMSJ9.fEI_aq_wDIIiqvPTu9uJbGkRzx0deZoYXABteMaqjuslcJpixFOysoCr2QxU9_mZ8WDBj-I_y6iiiGazwhpzIajXmYwfP3fV1pGevLyUF6248brZ6iBisVQenQ4xXhXzEHmQcbxaOmnRgFc09gWkTqtommhygZ-YiIEmpyOOt9iydfLTF7lyuh88iDFjoINc0_2DJ2b35D1TvR6FWPU4le1MbTI2qs_Sz6aW169LNpk.A-i3oeI9hRL13m267cO6VjFEEukhnbbNMpIvh-0n9F8&dib_tag=se&keywords=prepare+for+it+interview&qid=1731033511&s=digital-text&sprefix=prepare+for+i+interview%2Cdigital-text%2C297&sr=1-2" target="_blank" class="ad-link">
+                <img src="https://m.media-amazon.com/images/I/51MI6VUKrJL.jpg" alt="Ace the IT Interview Book">
+                <span>Ace the IT Interview: Get Your Dream Job</span>
+            </a>
+        </aside>
+
+        <!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="addendum">
+        <h3>Addendum</h3>
+        <p><strong>Problem Solved:</strong> The main objective of this project was to create a job application tracker that allows users to add job applications, set their status (Applied, Interviewing, Offered, or Rejected), and manage them by moving applications between these categories.</p>
+        
+        <p><strong>Solution Overview:</strong> I implemented a solution using JavaScript to handle form submissions, store each job application in an array, and dynamically display the applications based on their status. The interface updates in real-time as applications are moved between statuses, offering an intuitive way to track job application progress.</p>
+        
+        <p><strong>Challenges and Solutions:</strong> One challenge I encountered was ensuring that the applications could seamlessly move between different status categories without refreshing the page. I resolved this by utilizing JavaScript functions to filter and update the applications array based on their current status. Styling consistency across dynamic elements was another challenge, which I addressed by carefully applying CSS classes to each interactive element. This approach helped achieve a uniform and visually appealing design.</p>
+    </div>
+    
+    <div class="last-updated">
+        <p><strong>Last Updated:</strong> <span id="lastModified"></span></p>
+    </div>
+    
+    <script type="text/javascript">
+        // Script to display last modified date
+        var lastModifiedDate = document.lastModified;
+        document.getElementById('lastModified').textContent = lastModifiedDate;
+    </script>
+</footer>
+
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
